@@ -1,0 +1,140 @@
+.header {
+  background-color: $pink;
+
+  .top-bar {
+    color: $white-color;
+    display: flex;
+    justify-content: space-between;
+
+    .wrap
+    .date {
+      align-items: center;
+      display: inline-flex;
+      padding: 10px 120px 10px 0;
+
+      .calendar img {
+        height: 24px;
+        padding-right: 15px;
+        width: auto;
+      }
+
+      .numbers p {
+        font-family: 'Lato';
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+
+      }
+    }
+
+    .city {
+      align-items: center;
+      display: inline-flex;
+      padding: 20px 0;
+
+      .wheather img {
+        height: 23px;
+        padding-right: 15px;
+        width: auto;
+      }
+
+      .name p {
+        font-family: 'Lato';
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+
+      }
+    }
+
+    .top-links {
+      ul {
+        display: inline-flex;
+
+        li {
+          border-left: 1px solid $trp-white;
+          border-right: 1px solid $trp-white;
+          list-style-type: none;
+          padding: 20px 15px;
+
+          &:last-child {
+            border-right: 2px solid $trp-white;
+          }
+
+          &:first-child {
+            border-left: 2px solid $trp-white;
+          }
+
+          a {
+            color: $white-color;
+            font-family: Lato;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 1.2px;
+            text-decoration: none;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header-bottom {
+  background-color: $white;
+
+  .navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 0;
+
+    .logo {
+      display: flex;
+
+      .burger img {
+        height: 28px;
+        padding-right: 18px;
+        width: auto;
+      }
+
+      .logo-img img {
+        height: 24px;
+        width: auto;
+      }
+    }
+
+    .menu {
+      ul {
+        display: inline-flex;
+
+        li {
+          list-style-type: none;
+          padding: 0 23px;
+
+          &:last-child {
+            padding-right: 0;
+          }
+
+          &:first-child {
+            padding-left: 0;
+          }
+
+          a {
+            color: $dusty;
+            font-family: 'Lato';
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    .soc-media img {
+      height: 24px;
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,156 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$-menu-icon-2x-name: 'Menu_Icon@2x';
+$-menu-icon-2x-x: 101px;
+$-menu-icon-2x-y: 147px;
+$-menu-icon-2x-offset-x: -101px;
+$-menu-icon-2x-offset-y: -147px;
+$-menu-icon-2x-width: 70px;
+$-menu-icon-2x-height: 56px;
+$-menu-icon-2x-total-width: 502px;
+$-menu-icon-2x-total-height: 247px;
+$-menu-icon-2x-image: 'sprite.png';
+$-menu-icon-2x: (101px, 147px, -101px, -147px, 70px, 56px, 502px, 247px, 'sprite.png', 'Menu_Icon@2x', );
+$-world-story-2x-name: 'WorldStory@2x';
+$-world-story-2x-x: 0px;
+$-world-story-2x-y: 0px;
+$-world-story-2x-offset-x: 0px;
+$-world-story-2x-offset-y: 0px;
+$-world-story-2x-width: 502px;
+$-world-story-2x-height: 48px;
+$-world-story-2x-total-width: 502px;
+$-world-story-2x-total-height: 247px;
+$-world-story-2x-image: 'sprite.png';
+$-world-story-2x: (0px, 0px, 0px, 0px, 502px, 48px, 502px, 247px, 'sprite.png', 'WorldStory@2x', );
+$calendar-2x-name: 'calendar@2x';
+$calendar-2x-x: 219px;
+$calendar-2x-y: 147px;
+$calendar-2x-offset-x: -219px;
+$calendar-2x-offset-y: -147px;
+$calendar-2x-width: 44px;
+$calendar-2x-height: 48px;
+$calendar-2x-total-width: 502px;
+$calendar-2x-total-height: 247px;
+$calendar-2x-image: 'sprite.png';
+$calendar-2x: (219px, 147px, -219px, -147px, 44px, 48px, 502px, 247px, 'sprite.png', 'calendar@2x', );
+$social-name: 'social';
+$social-x: 0px;
+$social-y: 49px;
+$social-offset-x: 0px;
+$social-offset-y: -49px;
+$social-width: 482px;
+$social-height: 48px;
+$social-total-width: 502px;
+$social-total-height: 247px;
+$social-image: 'sprite.png';
+$social: (0px, 49px, 0px, -49px, 482px, 48px, 502px, 247px, 'sprite.png', 'social', );
+$social-2x-name: 'social@2x';
+$social-2x-x: 0px;
+$social-2x-y: 98px;
+$social-2x-offset-x: 0px;
+$social-2x-offset-y: -98px;
+$social-2x-width: 482px;
+$social-2x-height: 48px;
+$social-2x-total-width: 502px;
+$social-2x-total-height: 247px;
+$social-2x-image: 'sprite.png';
+$social-2x: (0px, 98px, 0px, -98px, 482px, 48px, 502px, 247px, 'sprite.png', 'social@2x', );
+$sun-name: 'sun';
+$sun-x: 0px;
+$sun-y: 147px;
+$sun-offset-x: 0px;
+$sun-offset-y: -147px;
+$sun-width: 100px;
+$sun-height: 100px;
+$sun-total-width: 502px;
+$sun-total-height: 247px;
+$sun-image: 'sprite.png';
+$sun: (0px, 147px, 0px, -147px, 100px, 100px, 502px, 247px, 'sprite.png', 'sun', );
+$sun-2x-name: 'sun@2x';
+$sun-2x-x: 172px;
+$sun-2x-y: 147px;
+$sun-2x-offset-x: -172px;
+$sun-2x-offset-y: -147px;
+$sun-2x-width: 46px;
+$sun-2x-height: 48px;
+$sun-2x-total-width: 502px;
+$sun-2x-total-height: 247px;
+$sun-2x-image: 'sprite.png';
+$sun-2x: (172px, 147px, -172px, -147px, 46px, 48px, 502px, 247px, 'sprite.png', 'sun@2x', );
+$spritesheet-width: 502px;
+$spritesheet-height: 247px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($-menu-icon-2x, $-world-story-2x, $calendar-2x, $social, $social-2x, $sun, $sun-2x, );
+$spritesheet: (502px, 247px, 'sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
