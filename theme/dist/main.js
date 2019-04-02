@@ -1,2 +1,3 @@
-$( document ).ready(function() {
-});
+  $('.burger').click(function(event) {
+    $('.menu').slideToggle(500);
+  });

@@ -12,6 +12,10 @@ html {
     box-sizing: border-box;
     font-family: $main-font;
   }
+
+  @include media-breakpoint-down(md) {
+    font-size: 85%;
+  }
 }
 
 *:before,

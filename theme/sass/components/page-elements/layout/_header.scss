@@ -1,6 +1,9 @@
 .header {
   background-color: $pink;
 
+  * {
+      @include rem(font-size, 15px);
+  }
   .top-bar {
     color: $white-color;
     display: flex;
@@ -8,19 +11,19 @@
 
     .wrap
     .date {
+      @include rem(padding, 10px 120px 10px);
       align-items: center;
       display: inline-flex;
-      padding: 10px 120px 10px 0;
+      padding-left: 0;
 
       .calendar img {
-        height: 24px;
-        padding-right: 15px;
+        @include rem(height, 24px);
+        @include rem(padding-right, 15px);
         width: auto;
       }
 
       .numbers p {
         font-family: 'Lato';
-        font-size: 15px;
         letter-spacing: 1.5px;
         text-transform: uppercase;
 
@@ -28,19 +31,18 @@
     }
 
     .city {
+      @include rem(padding, 20px 0);
       align-items: center;
       display: inline-flex;
-      padding: 20px 0;
 
       .wheather img {
-        height: 23px;
-        padding-right: 15px;
+        @include rem(height, 23px);
+        @include rem(padding-right, 15px);
         width: auto;
       }
 
       .name p {
         font-family: 'Lato';
-        font-size: 15px;
         letter-spacing: 1.5px;
         text-transform: uppercase;
 
@@ -52,10 +54,10 @@
         display: inline-flex;
 
         li {
+          @include rem(padding, 20px 15px);
           border-left: 1px solid $trp-white;
           border-right: 1px solid $trp-white;
           list-style-type: none;
-          padding: 20px 15px;
 
           &:last-child {
             border-right: 2px solid $trp-white;
@@ -68,7 +70,6 @@
           a {
             color: $white-color;
             font-family: Lato;
-            font-size: 15px;
             font-weight: 400;
             letter-spacing: 1.2px;
             text-decoration: none;
@@ -78,63 +79,134 @@
       }
     }
   }
+
+  @include media-breakpoint-down(md) {
+    .top-bar .wrap .date {
+      @include rem(padding-right, 35px);
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .top-bar .top-links {
+      display: none;
+    }
+  }
 }
 
 .header-bottom {
   background-color: $white;
 
   .navigation-bar {
+    @include rem(padding, 28px 0);
     display: flex;
     justify-content: space-between;
-    padding: 28px 0;
 
     .logo {
       display: flex;
 
-      .burger img {
-        height: 28px;
-        padding-right: 18px;
+      .burger-img img {
+        @include rem(padding-right, 18px);
+        @include rem(height, 2px);
         width: auto;
       }
 
       .logo-img img {
-        height: 24px;
+        @include rem(height, 24px);
         width: auto;
       }
     }
 
-    .menu {
-      ul {
-        display: inline-flex;
+    ul {
+      display: inline-flex;
 
-        li {
-          list-style-type: none;
-          padding: 0 23px;
+      li {
+        list-style-type: none;
+        @include rem(padding-left, 23px);
+        @include rem(padding-right, 23px);
 
-          &:last-child {
-            padding-right: 0;
-          }
+        &:last-child {
+          padding-right: 0;
+        }
 
-          &:first-child {
-            padding-left: 0;
-          }
+        &:first-child {
+          padding-left: 0;
+        }
 
-          a {
-            color: $dusty;
-            font-family: 'Lato';
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-decoration: none;
-            text-transform: uppercase;
-          }
+        a {
+          color: $dusty;
+          font-family: 'Lato';
+          font-weight: 700;
+          letter-spacing: 2px;
+          text-decoration: none;
+          text-transform: uppercase;
+          @include rem(font-size, 20px);
         }
       }
     }
 
     .soc-media img {
-      height: 24px;
+      @include rem(height, 24px);
       width: auto;
     }
   }
+
+  @include media-breakpoint-down(lg) {
+    .navigation-bar .soc-media {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+  .burger {
+    display: none;
+  }
 }
+
+  @include media-breakpoint-down(md) {
+    .navigation-bar .logo {
+      .burger-img img {
+        @include rem(height, 20px);
+      }
+
+      .logo-img img {
+        @include rem(height, 16px);
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .navigation-bar {
+      position: relative;
+
+      .logo .burger-img img {
+        display: none;
+      }
+
+      .burger .icon-menu {
+        cursor: pointer;
+        @include rem(padding-left, 50px);
+
+        img {
+          @include rem(height, 20px);
+          width: auto;
+        }
+      }
+
+      ul {
+        top: 100%;
+        display: none;
+        flex-direction: column;
+        right: 0;
+        position: absolute;
+        text-align: right;
+
+        li {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
