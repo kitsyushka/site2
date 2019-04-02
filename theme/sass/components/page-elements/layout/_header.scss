@@ -23,7 +23,7 @@
       }
 
       .numbers p {
-        font-family: 'Lato';
+        font-family: $main-font;
         letter-spacing: 1.5px;
         text-transform: uppercase;
 
@@ -42,7 +42,7 @@
       }
 
       .name p {
-        font-family: 'Lato';
+        font-family: $main-font;
         letter-spacing: 1.5px;
         text-transform: uppercase;
 
@@ -69,7 +69,7 @@
 
           a {
             color: $white-color;
-            font-family: Lato;
+            font-family: $main-font;
             font-weight: 400;
             letter-spacing: 1.2px;
             text-decoration: none;
@@ -106,7 +106,7 @@
 
       .burger-img img {
         @include rem(padding-right, 18px);
-        @include rem(height, 2px);
+        @include rem(height, 24px);
         width: auto;
       }
 
@@ -134,7 +134,7 @@
 
         a {
           color: $dusty;
-          font-family: 'Lato';
+          font-family: $main-font;
           font-weight: 700;
           letter-spacing: 2px;
           text-decoration: none;
@@ -165,7 +165,8 @@
   @include media-breakpoint-down(md) {
     .navigation-bar .logo {
       .burger-img img {
-        @include rem(height, 20px);
+        @include rem(height, 100px);
+        width: auto;
       }
 
       .logo-img img {

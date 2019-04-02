@@ -4676,7 +4676,7 @@ table {
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 100%; }
 
 /* line 6, /var/www/site2/theme/sass/base/_base.scss */
@@ -4689,7 +4689,7 @@ html * {
   -webkit-font-smoothing: antialiased;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Lato", sans-serif; }
 
 @media (max-width: 991.98px) {
   /* line 1, /var/www/site2/theme/sass/base/_base.scss */
@@ -4918,7 +4918,7 @@ ul {
 
 /* line 25, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
 .header .top-bar .wrap .date .numbers p {
-  font-family: 'Lato';
+  font-family: "Lato", sans-serif;
   letter-spacing: 1.5px;
   text-transform: uppercase; }
 
@@ -4943,7 +4943,7 @@ ul {
 
 /* line 44, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
 .header .top-bar .city .name p {
-  font-family: 'Lato';
+  font-family: "Lato", sans-serif;
   letter-spacing: 1.5px;
   text-transform: uppercase; }
 
@@ -4972,7 +4972,7 @@ ul {
 /* line 70, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
 .header .top-bar .top-links ul li a {
   color: #ffffff;
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   letter-spacing: 1.2px;
   text-decoration: none;
@@ -5014,8 +5014,8 @@ ul {
 .header-bottom .navigation-bar .logo .burger-img img {
   padding-right: 18px;
   padding-right: 1.125rem;
-  height: 2px;
-  height: 0.125rem;
+  height: 24px;
+  height: 1.5rem;
   width: auto; }
 
 /* line 113, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
@@ -5049,7 +5049,7 @@ ul {
 /* line 135, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
 .header-bottom .navigation-bar ul li a {
   color: #0e0e0e;
-  font-family: 'Lato';
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
   text-decoration: none;
@@ -5076,31 +5076,32 @@ ul {
 @media (max-width: 991.98px) {
   /* line 167, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
   .header-bottom .navigation-bar .logo .burger-img img {
-    height: 20px;
-    height: 1.25rem; }
-  /* line 171, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
+    height: 100px;
+    height: 6.25rem;
+    width: auto; }
+  /* line 172, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
   .header-bottom .navigation-bar .logo .logo-img img {
     height: 16px;
     height: 1rem; } }
 
 @media (max-width: 767.98px) {
-  /* line 178, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
+  /* line 179, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
   .header-bottom .navigation-bar {
     position: relative; }
-  /* line 181, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
+  /* line 182, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
   .header-bottom .navigation-bar .logo .burger-img img {
     display: none; }
-  /* line 185, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
+  /* line 186, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
   .header-bottom .navigation-bar .burger .icon-menu {
     cursor: pointer;
     padding-left: 50px;
     padding-left: 3.125rem; }
-  /* line 189, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
+  /* line 190, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
   .header-bottom .navigation-bar .burger .icon-menu img {
     height: 20px;
     height: 1.25rem;
     width: auto; }
-  /* line 195, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
+  /* line 196, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
   .header-bottom .navigation-bar ul {
     top: 100%;
     display: none;
@@ -5111,7 +5112,7 @@ ul {
     right: 0;
     position: absolute;
     text-align: right; }
-  /* line 203, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
+  /* line 204, /var/www/site2/theme/sass/components/page-elements/layout/_header.scss */
   .header-bottom .navigation-bar ul li {
     padding: 0; } }
 
