@@ -2,8 +2,9 @@
   background-color: $pink;
 
   * {
-      @include rem(font-size, 15px);
+    @include rem(font-size, 15px);
   }
+
   .top-bar {
     color: $white-color;
     display: flex;
@@ -120,9 +121,9 @@
       display: inline-flex;
 
       li {
-        list-style-type: none;
         @include rem(padding-left, 23px);
         @include rem(padding-right, 23px);
+        list-style-type: none;
 
         &:last-child {
           padding-right: 0;
@@ -133,13 +134,13 @@
         }
 
         a {
+          @include rem(font-size, 20px);
           color: $dusty;
           font-family: $main-font;
           font-weight: 700;
           letter-spacing: 2px;
           text-decoration: none;
           text-transform: uppercase;
-          @include rem(font-size, 20px);
         }
       }
     }
@@ -157,15 +158,15 @@
   }
 
   @include media-breakpoint-up(md) {
-  .burger {
-    display: none;
-  }
+    .burger {
+      display: none;
+    }
 }
 
   @include media-breakpoint-down(md) {
     .navigation-bar .logo {
       .burger-img img {
-        @include rem(height, 100px);
+        @include rem(height, 20px);
         width: auto;
       }
 
@@ -184,8 +185,8 @@
       }
 
       .burger .icon-menu {
-        cursor: pointer;
         @include rem(padding-left, 50px);
+        cursor: pointer;
 
         img {
           @include rem(height, 20px);
@@ -194,12 +195,12 @@
       }
 
       ul {
-        top: 100%;
         display: none;
         flex-direction: column;
-        right: 0;
         position: absolute;
+        right: 0;
         text-align: right;
+        top: 100%;
 
         li {
           padding: 0;
